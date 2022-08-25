@@ -33,7 +33,7 @@ const MainPage = () => {
         <li className="py-6 text-3xl hover:text-5xl hover:underline ">
           Contact
         </li>
-      </ul>
+      </ul>logo_fac.svg
     </div>
   );
 };
