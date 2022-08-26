@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
-const MainPage = () => {
+import logo from "../assets/logo.svg";
+const NavBar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   return (
-    <div className="fixed w-full h-[45px] flex justify-end items-center px-4 bg-gray-800 text-gray-300">
+    <div className="fixed w-full h-[45px] flex justify-between items-center px-4 bg-gray-800 text-gray-300">
+      <div className="bg-[#c5cad1]">
+        <img src={logo} alt="logo" style={{ width: "60px" }} />
+      </div>
       <ul className="hidden md:flex space-x-10 text-l">
-        <li className="hover:underline hover:text-4xl">Home</li>
-        <li className="hover:underline hover:text-4xl ">About</li>
-        <li className="hover:underline hover:text-4xl ">Contact</li>
-        <li className="hover:underline hover:text-4xl ">Services</li>
+        <li className="hover:underline hover:text-4xl"><a href="/">Home</a></li>
+        <li className="hover:underline hover:text-4xl "><a href="/about">About</a></li>
+        <li className="hover:underline hover:text-4xl "><a href="/contact">Contact</a></li>
+        <li className="hover:underline hover:text-4xl "><a href="/services">Services</a></li>
       </ul>
 
       <div onClick={handleClick} className="md:hidden z-10">
@@ -33,9 +36,9 @@ const MainPage = () => {
         <li className="py-6 text-3xl hover:text-5xl hover:underline ">
           Contact
         </li>
-      </ul>logo_fac.svg
+      </ul>
     </div>
   );
 };
 
-export default MainPage;
+export default NavBar;
